@@ -1,0 +1,145 @@
+/*  GENERAL  */
+
+@font-face {
+	font-family: 'FuturaExtended';
+	src: url('./fonts/FuturaExtended.ttf');
+}
+
+@font-face {
+	font-family: 'Tahu';
+	src: url('./fonts/Tahu!.ttf');
+}
+
+body {
+	font-family: FuturaExtended;
+	background-color : #c6dde4;
+}
+
+#page_accueil, #page_carte {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around; align-items: center;
+    width: 100vw;
+	height: 100vh;
+}
+
+h1,h2,p {
+	font-weight: normal;
+}
+
+.page-inactive {
+	display: none !IMPORTANT;
+}
+
+/*  PAGE ACCUEIL  */
+
+#siteTitle {
+	font-family: Tahu;
+	color: #000005;
+	font-size: 4em;
+}
+
+#startAdventure{
+    display: flex;
+    justify-content: center;
+}
+
+#buttonStart{
+    background: none;
+    border: none;
+	font-family: Tahu;
+	color: #ff3859;
+	font-size: 3em;
+	text-decoration: none;
+}
+
+#inputName {
+	border: none; background: none;
+	border-bottom: 1.5px white solid;
+}
+
+#formName {
+	width: 55%;
+	margin-left: auto; 
+	margin-right: auto;
+}
+
+#bonhommesAccueil {
+	width: 40%; height: 40%;
+}
+
+/*  PAGE CARTE  */
+
+.popup {
+	display: none;
+}
+
+#blackBG {
+	display: block;
+	width: 100vw; height: 100vh;
+	background-color: rgba(0,0,0,0.7);
+	position: fixed;
+	top: 0; left: 0;
+	/*display: none;*/
+}
+
+.popup-active {
+	display: flex;
+	flex-direction: column;
+	color: #444444;
+	width: 400px;
+	height: 700px;
+	background-color : #c6dde4;
+	position: fixed;
+	top: 50%; left: 50%;
+	transform: translate(-50%,-50%);
+	border: 3px solid white;
+	
+	border-radius: 20px;
+	padding: 2%;
+	overflow: scroll;
+	/*display: none;*/
+}
+
+.popupHeader {
+	font-family: Tahu;
+	color: #ff3859;
+	font-size: 2em;
+	text-align: center;
+}
+
+.closed_cross {
+	width: 4%; height: auto;
+	align-self: end;
+}
+
+#mapDescription span {
+	font-family: Tahu;
+	color: #ff3859;
+	font-size: 2em;
+}
+
+#helloName {
+	font-size: 1.5em;
+}
+
+#goBackHomeButton {
+	align-self: start;
+	margin-left: 5vw;
+}
+
+#goBackHome img {
+	width: 50%; height: auto;
+}
+
+#bonhommeEnBas {
+	align-self: start;
+	width: 13%; height: auto;
+	margin-left: 3vw;
+}
+
+#bulleExpression {
+	position: fixed;
+	width: 10%; height: auto;
+	right: 10%;
+}

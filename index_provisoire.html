@@ -1,0 +1,221 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <title>IMAC Trotter</title>
+		<link href="normalize.css" rel="stylesheet"/>
+		<link href="style_index.css" rel="stylesheet"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    </head>
+    
+    <body>
+	<div id="page_accueil">
+        <h1 id="siteTitle">Bienvenue sur IMAC Trotter !</h1>
+		<img id="bonhommesAccueil" src="img/icons/character.png" alt="Bonhommes"/>
+            <form id="form" method="post">
+                <h2 id="subtitleName">Entre ton prénom pour commencer l'aventure !</h2>
+                <p id="formName">Prénom : <input id="inputName" name="name" type ="text" value=""/></p>
+                <div id="startAdventure"><input type="submit" value="Go !" id="buttonStart" /></div>
+            </form>
+	</div>
+	<div id="page_carte" class="page-inactive">
+		<div id="goBackHomeButton">
+				<a href="index_provisoire.html" id="goBackHome"><img src="img/icons/fleche_accueil.png" alt="Bouton d'accueil" /></a>
+			</div>
+			<h1 id="helloName">Salut <span id="userName">Bâtard (fallait mettre ton nom, mdr)</span> !</h1>    
+			<p id="mapDescription">Explorons les <span>expressions</span> des régions à travers la carte !</p>
+			
+			<div id="map"></div>
+		   
+			<img id="bulleExpression" src="img/icons/bulle_lala.png" alt="Expression dans une bulle"/>
+			
+			<img id="bonhommeEnBas" src="img/icons/character2.png" alt="Bonhomme qui marche"/>
+			
+			<div id="popup">
+			
+				<div id="blackBG"></div> 
+				<div id="popupNord" class="popup">
+					<input type="image" class="closed_cross" src="img/icons/cross.png" alt="Croix pour fermer la fenêtre"/>
+					<div class="popupHeader">
+						<h1 class="regionTitle">Le Nord</h1>
+						<img class="flags" src="img/flags/nord_flag.png" alt="Drapeau de la région"/>
+					</div>
+					<h2 class="regionSubtitles">Les Expressions d'ici :</h2>
+					<ul>
+						<li class="listExpressions">"J'te dis quoi" = "Je te tiens au courant"</li>    
+						<li class="listExpressions">La drache = La pluie</li>    
+						<li class="listExpressions">La ducasse = La fête (foraine)</li>    
+						<li class="listExpressions">"Vinte" = 20</li>    
+						<li class="listExpressions">"Être quervé" = "Être bourré"</li>    
+					</ul>
+					<h2 class="regionSubtitles">La Bouffe d'ici :</h2>
+					<ul>
+						<li class="listBouffe">La fricadelle</li>
+						<li class="listBouffe">Les frites</li>
+						<li class="listBouffe">La carbonnade</li>
+						<li class="listBouffe">La bière</li>
+						<li class="listBouffe">Les frites</li>
+					</ul>
+					<h2 class="regionSubtitles">Concrètement, ça donne un truc comme ça :</h2>
+					<p class="regionText">Ichi din ch'nord, on aime bien l'ducasse ! Parce qu'on y boit plein d'pintes eud'bière... l'ote jour, j'en ai bu vinte ! J'étais quervé comme eune andoulle, et après, y s'est mis à dracher comme pas possib'. 'Fin bref, ichi on dit un crayon d'bois, HEIN !</p>
+				</div>
+				
+				<div id="popupSudOuest" class="popup">
+					<input type="image" class="closed_cross" src="img/icons/cross.png" alt="Croix pour fermer la fenêtre"/>
+					<div class="popupHeader">
+						<h1 class="regionTitle">Le Sud-Ouest</h1>
+						<img class="flags" src="img/flags/sud_ouest_flag.png" alt="Drapeau de la région"/>
+					</div>
+					<h2 class="regionSubtitles">Les Expressions d'ici :</h2>
+					<ul>
+						<li class="listExpressions">"Faire key" = "Faire attention"</li>    
+						<li class="listExpressions">Gavé = Trop, beaucoup</li>    
+						<li class="listExpressions">"Oh anquiiii !" ="Oh enc.....!"</li>    
+						<li class="listExpressions">MoinSSE = Moins</li>     
+					</ul>
+					<h2 class="regionSubtitles">La Bouffe d'ici :</h2>
+					<ul>
+						<li class="listBouffe">La salade landaise</li>
+						<li class="listBouffe">Le cassoulet</li>
+						<li class="listBouffe">Le foie gras</li>
+					</ul>
+					<h2 class="regionSubtitles">Concrètement, ça donne un truc comme ça :</h2>
+					<p class="regionText">Ehhh anquiii ! T'as cliqué au bon endroit, sur la région la moinsse reloue de France. J'suis sûr que tu vas gavé kiffer, parce que ce site, en vrai, il est gavé bien, avoue ! Fais key parce qu'ici, on dit chocolatine... !</p>
+				</div>
+				
+				<div id="popupEst" class="popup">
+					<input type="image" class="closed_cross" src="img/icons/cross.png" alt="Croix pour fermer la fenêtre"/>
+					<div class="popupHeader">
+						<h1 class="regionTitle">L'Est</h1>
+						<img class="flags" src="img/flags/est_flag.png" alt="Drapeau de la région"/>
+					</div>
+					<h2 class="regionSubtitles">Les Expressions d'ici :</h2>
+					<ul>
+						<li class="listExpressions">"Clancher la porte" = "Fermer la porte"</li>    
+						<li class="listExpressions">"Comment qu'c'est ?" = "Comment ça va ?"</li>    
+						<li class="listExpressions">Les spätzles = Les pâtes</li>    
+						<li class="listExpressions">"Faire un schmoutz" = "Faire un bisou"</li>     
+					</ul>
+					<h2 class="regionSubtitles">La Bouffe d'ici :</h2>
+					<ul>
+						<li class="listBouffe">La quiche lorraine</li>
+						<li class="listBouffe">La choucroute garnie</li>
+						<li class="listBouffe">Le Kouglof</li>
+					</ul>
+					<h2 class="regionSubtitles">Concrètement, ça donne un truc comme ça :</h2>
+					<p class="regionText">Comment qu'c'est ? Ici, pour se tenir chaud, on aime bien s'humecter le pipe-line (se mettre des murges si tu préfères). Après, on éponge ça avec un bon gros plat de spätzles (parce que... AU WEIII, AU WEIII, AU WEII, Y'A DES SPÄTZLESSS). On est tellement beurrés comme des biscottes qu'on ne se souvient même plus si on a bien clanché la porte, le matin. Bref, t'as compris l'idée... allez, salut, on te fait plein de schmoutz partout.</p>
+				</div>
+				
+				<div id="popupBretagne" class="popup popup-active">
+					<input type="image" class="closed_cross" src="img/icons/cross.png" alt="Croix pour fermer la fenêtre"/>
+					<div class="popupHeader">
+						<h1 class="regionTitle">La Bretagne</h1>
+						<img class="flags" src="img/flags/bretagne_flag.png" alt="Drapeau de la région"/>
+					</div>
+					<h2 class="regionSubtitles">Les Expressions d'ici :</h2>
+					<ul>
+						<li class="listExpressions">"Faire la riboule" = "Faire la fête"</li>    
+						<li class="listExpressions">Des pok = Des bisous</li>    
+						<li class="listExpressions">Un poch = Un pochetron</li>    
+						<li class="listExpressions">"Attraper le mal" = "Attraper froid"</li>     
+					</ul>
+					<h2 class="regionSubtitles">La Bouffe d'ici :</h2>
+					<ul>
+						<li class="listBouffe">Les crêpes, wsh</li>
+						<li class="listBouffe">Le Far Breton (logique, non ?)</li>
+						<li class="listBouffe">Le Kig ha farz (ça n'a pas l'air, mais c'est au taquet connu, en vrai !)</li>
+						<li class="listBouffe">Le Kouign amann</li>
+						<li class="listBouffe">Le beurre (salé, attention !)</li>
+					</ul>
+					<h2 class="regionSubtitles">Concrètement, ça donne un truc comme ça :</h2>
+					<p class="regionText">Un proverbe breton dit que « si tu sens la pluie sur ta tête, c'est que tu n'es pas à la buvette ». Le problème, c'est qu'on dit aussi « qu'en Bretagne, il fait beau plusieurs fois par jour ». Donc les moments où il ne fait pas beau, il pleut, donc tu vas à la buvette et tu fais la riboule, pour éviter d'attraper le mal parce qu'il fait quand même un peu frisquette sous la pluie. Mais tout le monde fait ça en Bretagne, t'inquiètes, t'es pas le seul poch de la ville. AH et on dit « crayon gris » nous, comme le ciel au dessus de nos têtes quoi. Allez, pok, pok !</p>
+				</div>
+				
+				<div id="popupSudEst" class="popup">
+					<input type="image" class="closed_cross" src="img/icons/cross.png" alt="Croix pour fermer la fenêtre"/>
+					<div class="popupHeader">
+						<h1 class="regionTitle">Le Sud-Est</h1>
+						<img class="flags" src="img/flags/sud_est_flag.png" alt="Drapeau de la région"/>
+					</div>
+					<h2 class="regionSubtitles">Les Expressions d'ici :</h2>
+					<ul>
+						<li class="listExpressions">"Ça m'espante" = "Ça me surprend"</li>    
+						<li class="listExpressions">Tarpin = Trop, beaucoup</li>    
+						<li class="listExpressions">Caguer = Faire popo (mais en moins poli)</li>    
+						<li class="listExpressions">"Être empégué" = "Être bourré"</li>     
+						<li class="listExpressions">Ronquer = Dormir</li>     
+					</ul>
+					<h2 class="regionSubtitles">La Bouffe d'ici :</h2>
+					<ul>
+						<li class="listBouffe">La bouillabaisse</li>
+						<li class="listBouffe">La ratatouille</li>
+						<li class="listBouffe">La ratatouille</li>
+						<li class="listBouffe">La ratatouille</li>
+					</ul>
+					<h2 class="regionSubtitles">Concrètement, ça donne un truc comme ça :</h2>
+					<p class="regionText">Alors ?? Tu tires ou tu poiintes ? Ca ne m'espante pas que tu aies choisi notre région : on est tarpin stylés, nous ! T'es plutôt Ricard ou Pastis ? Perso, tant que j'finis bien empégué comme il faut, ça m'en touche une sans faire bouger l'autre. Bon, c'est pas que je me fais caguer mais je vais aller ronquer, moi.</p>
+				</div>
+				
+				<div id="popupCorse" class="popup">
+					<input type="image" class="closed_cross" src="img/icons/cross.png" alt="Croix pour fermer la fenêtre"/>
+					<div class="popupHeader">
+						<h1 class="regionTitle">La Corse</h1>
+						<img class="flags" src="img/flags/corse_flag.png" alt="Drapeau de la région"/>
+					</div>
+					<h2 class="regionSubtitles">Les Expressions d'ici :</h2>
+					<ul>
+						<li class="listExpressions">"Babin ?" = "Ça Va ?"</li>    
+						<li class="listExpressions">"Toccu de macu" = Génial</li>    
+						<li class="listExpressions">"Être en coghju" = "Être bourré"</li>    
+						<li class="listExpressions">Goffu = Moche</li>     
+					</ul>
+					<h2 class="regionSubtitles">La Bouffe d'ici :</h2>
+					<ul>
+						<li class="listBouffe">La coppa</li>
+						<li class="listBouffe">Le figatellu</li>
+						<li class="listBouffe">Le brocciu</li>
+						<li class="listBouffe">Les canistrelli</li>
+						<li class="listBouffe">Si t'as compris un des mots ci-dessus, GG !</li>
+					</ul>
+					<h2 class="regionSubtitles">Concrètement, ça donne un truc comme ça :</h2>
+					<p class="regionText">Babin ? C'est Toccu de Macu que tu aies cliqué là ! En vrai, cette phrase est un peu goffu mais pas grave, quand je l'ai écrite, j'étais complètement en coghju mdr.</p>
+				</div>
+				
+				<div id="popupIMAC" class="popup">
+					<input type="image" class="closed_cross" src="img/icons/cross.png" alt="Croix pour fermer la fenêtre"/>
+					<div class="popupHeader">
+						<h1 class="regionTitle">L'IMAC</h1>
+						<img class="flags" src="img/flags/imac_flag.png" alt="Drapeau de la région"/>
+					</div>
+					<h2 class="regionSubtitles">Les Expressions d'ici :</h2>
+					<ul>
+						<li class="listExpressions">"C'est Crous" = Se dit lorsque l'on effectue une action peu coûteuse</li>    
+						<li class="listExpressions">"C'est Shlag" = Peut s'utiliser en complément de "C'est Crous" quand l'action, en plus d'être peu coûteuse, est terriblement pourrave</li>    
+						<li class="listExpressions">"Y'A DESS PATTEUHHH"</li>    
+						<li class="listExpressions">"ALLEZ MANGER AILLEURS !"</li>     
+					</ul>
+					<h2 class="regionSubtitles">La Bouffe d'ici :</h2>
+					<ul>
+						<li class="listBouffe">Les frites du Crous</li>
+						<li class="listBouffe">Le Bobun</li>
+						<li class="listBouffe">Les sandwichs du Crous</li>
+						<li class="listBouffe">Le Bobun</li>
+						<li class="listBouffe">Les frites du Crous</li>
+					</ul>
+					<h2 class="regionSubtitles">Concrètement, ça donne un truc comme ça :</h2>
+					<p class="regionText">« La seule formation publique d'ingénieurs alliant arts et sciences » aussi dit « la formation la schlag de France ». Ici, tout est archi CROUS (wsh les projos sont encore en VGA). Mais bon, de toute façon, l'important, c'est la raaaacee !! Et puis, moi, J'AIMEEUHH LA FOREEETT.... PARCE QU'IL Y A DES PATEUUUUHHHH !</p>
+				</div>
+				
+				<div id="popupCentre" class="popup">
+					<input type="image" class="closed_cross" src="img/icons/cross.png" alt="Croix pour fermer la fenêtre"/>
+					<div class="popupHeader">
+						<h1 class="regionTitle">Le Centre</h1>
+						<img class="flags" src="#" alt="Drapeau de la région"/>
+					</div>
+					<p class="regionText">Zone de non-droit. Données non disponibles. Vous allez être redirigés vers la page d'accueil dans 5 secondes.</p>
+				</div>
+			</div>
+	</div>
+	<script src="main.js"></script>
+    </body>
+</html>
