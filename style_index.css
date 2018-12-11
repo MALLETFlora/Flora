@@ -20,7 +20,7 @@ body {
 	flex-direction: column;
 	justify-content: space-around; align-items: center;
     width: 100vw;
-	height: 100vh;
+	height: 95vh;
 }
 
 h1,h2,p {
@@ -65,10 +65,14 @@ h1,h2,p {
 }
 
 #bonhommesAccueil {
-	width: 40%; height: 40%;
+	width: auto; height: 60%;
 }
 
 /*  PAGE CARTE  */
+
+#map {
+    width: 50%; height: 70%;
+}
 
 .popup {
 	display: none;
@@ -129,13 +133,15 @@ h1,h2,p {
 }
 
 #goBackHome img {
-	width: 50%; height: auto;
+    position: fixed;
+    top: 5%; left: 5%;
+	width: 10%; height: auto;
 }
 
 #bonhommeEnBas {
-	align-self: start;
+    position: fixed;
+	bottom: 5%; left: 5%;
 	width: 13%; height: auto;
-	margin-left: 3vw;
 }
 
 #bulleExpression {

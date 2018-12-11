@@ -35,3 +35,13 @@ const ClosePopup = evt => {
 for (var i = 0; i < cross.length; i++){  
     cross[i].addEventListener('click', evt => ClosePopup(evt));  
 }
+
+
+
+mapboxgl.accessToken = 'pk.eyJ1IjoiaW1hY3Ryb3R0ZXIiLCJhIjoiY2pwazZ1NzdqMDBlajN3bzZudXYxOGtyMCJ9.jD0WGzpc-JqWoAehTGBouQ';
+    var map = new mapboxgl.Map({
+    container: 'map',
+    style: 'mapbox://styles/mapbox/streets-v9',
+    center: [2.2, 46.3],
+    zoom: 5
+});
