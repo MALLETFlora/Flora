@@ -12,7 +12,7 @@
 
 body {
 	font-family: FuturaExtended;
-	background-color : #c6dde4;
+	background-color : #92CECA;
 }
 
 #page_accueil, #page_carte {
@@ -48,7 +48,7 @@ h1,h2,p {
     background: none;
     border: none;
 	font-family: Tahu;
-	color: #ff3859;
+	color: #EA564E;
 	font-size: 3em;
 	text-decoration: none;
 }
@@ -59,13 +59,14 @@ h1,h2,p {
 }
 
 #formName {
-	width: 55%;
+	width: 65%;
 	margin-left: auto; 
 	margin-right: auto;
 }
 
 #bonhommesAccueil {
 	width: auto; height: 60%;
+    margin-bottom: 2%;
 }
 
 /*  PAGE CARTE  */
@@ -93,7 +94,7 @@ h1,h2,p {
 	color: #444444;
 	width: 400px;
 	height: 700px;
-	background-color : #c6dde4;
+	background-color : #92CECA;
 	position: fixed;
 	top: 50%; left: 50%;
 	transform: translate(-50%,-50%);
@@ -105,21 +106,32 @@ h1,h2,p {
 	/*display: none;*/
 }
 
+.flags {
+    width : 50%;
+    height: 50%;
+    margin-bottom: 3%;
+}
+
+.regionTitle {
+    margin-top: 5px;
+    margin-bottom: 30px;
+}
+
 .popupHeader {
 	font-family: Tahu;
-	color: #ff3859;
+	color: #EA564E;
 	font-size: 2em;
 	text-align: center;
 }
 
 .closed_cross {
-	width: 4%; height: auto;
+	width: 15px; height: auto;
 	align-self: end;
 }
 
 #mapDescription span {
 	font-family: Tahu;
-	color: #ff3859;
+	color: #EA564E;
 	font-size: 2em;
 }
 
@@ -148,4 +160,53 @@ h1,h2,p {
 	position: fixed;
 	width: 10%; height: auto;
 	right: 10%;
+}
+
+@media (max-width: 768px){
+    
+    #bonhommesAccueil{
+        width: 80%;
+        height: auto;
+    }
+    
+    #siteTitle{
+        font-size: 3em;
+        text-align: center;
+    }
+    
+    #subtitleName {
+        font-size: 1.2em;
+        text-align: center;
+    }
+    
+    #formName{
+        width: auto;
+        margin-left: 10%;
+    }
+    
+    #helloName{
+        font-size: 1.2em;
+        margin-top: 4%;
+        margin-bottom: 2%;
+        text-align: center;
+    }
+    
+    #mapDescription{
+        margin-top: 2%;
+        text-align: center;
+    }
+}
+
+@media (max-width: 500px){
+    #bonhommeEnBas {
+        display: none;
+    }
+    
+    #bulleExpression {
+        display: none;
+    }
+    
+    #helloName{
+        margin-top: 10%;
+    }
 }
