@@ -17,7 +17,10 @@ const AccueilToCarte = evt => {
 
 inputName.addEventListener('keyup', evt => ChangeUserName(evt.target.value, userName));
 
-goButton.addEventListener('click', evt => AccueilToCarte(evt));
+goButton.addEventListener('click', evt => {
+    AccueilToCarte(evt);
+    document.querySelector('audio').autoplay = "true";
+});
 
 
 
