@@ -80,12 +80,11 @@ h1,h2,p {
 }
 
 #blackBG {
-	display: block;
+	display: none;
 	width: 100vw; height: 100vh;
 	background-color: rgba(0,0,0,0.7);
 	position: fixed;
 	top: 0; left: 0;
-	/*display: none;*/
 }
 
 .popup-active {
@@ -103,7 +102,12 @@ h1,h2,p {
 	border-radius: 20px;
 	padding: 2%;
 	overflow: scroll;
-	/*display: none;*/
+}
+
+#countDown {
+    font-weight: bold;
+    font-size: 4em;
+    text-align: center;
 }
 
 .flags {

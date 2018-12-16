@@ -24,13 +24,30 @@ goButton.addEventListener('click', evt => AccueilToCarte(evt));
 
 
 const cross = document.querySelectorAll('.closed_cross');
+const countDown = document.querySelector('#countDown');
+
+const CountDownFrom5 = element =>{
+    setTimeout(function(){element.innerHTML = "4";}, 1000);
+    setTimeout(function(){element.innerHTML = "3";}, 2000);
+    setTimeout(function(){element.innerHTML = "2";}, 3000);
+    setTimeout(function(){element.innerHTML = "1";}, 4000);
+}
+
+const Refresh = element => {
+    element.location.reload();
+}
 
 const OpenPopup = (evt, index) => {
     const popup = document.querySelector(`#${index}`);
     evt.preventDefault();
     const cur = popup;
     cur.classList.add('popup-active');
-    document.querySelector('#blackBG').style.display = "fixed";
+    document.querySelector('#blackBG').style.display = "block";
+    
+    if (index === "popupCentre"){
+        CountDownFrom5(countDown);
+        setTimeout(Refresh, 5000, document);
+    }
 }
 
 
@@ -74,7 +91,6 @@ map.on('mouseenter', 'markers-map', function () {
         map.getCanvas().style.cursor = 'pointer';
 });
 
-// Change it back to a pointer when it leaves.
 map.on('mouseleave', 'markers-map', function () {
         map.getCanvas().style.cursor = '';
 });
