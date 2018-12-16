@@ -73,6 +73,7 @@ h1,h2,p {
 
 #map {
     width: 50%; height: 70%;
+    text-align: justify;
 }
 
 .popup {

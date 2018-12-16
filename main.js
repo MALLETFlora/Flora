@@ -63,18 +63,22 @@ for (var i = 0; i < cross.length; i++){
 }
 
 
-
-mapboxgl.accessToken = 'pk.eyJ1IjoiaW1hY3Ryb3R0ZXIiLCJhIjoiY2pwazZ1NzdqMDBlajN3bzZudXYxOGtyMCJ9.jD0WGzpc-JqWoAehTGBouQ';
+const LoadingMap = () => {
+    mapboxgl.accessToken = 'pk.eyJ1IjoiaW1hY3Ryb3R0ZXIiLCJhIjoiY2pwazZ1NzdqMDBlajN3bzZudXYxOGtyMCJ9.jD0WGzpc-JqWoAehTGBouQ';
     var map = new mapboxgl.Map({
     container: 'map',
     style: 'mapbox://styles/imactrotter/cjpmh7pll0nde2rmcyi8ftdn0',
     center: [2.2, 46.3],
     zoom: 5
-});
+    });
 
-var features = map.queryRenderedFeatures({ layers: ['markers-map'] });
+    map.on('load', 'markers-map', evt => {
+        evt.resize(); 
+    });
 
-map.on('click', 'markers-map', (evt, index) => {
+    var features = map.queryRenderedFeatures({ layers: ['markers-map'] });
+
+    map.on('click', 'markers-map', (evt, index) => {
         if (evt.features[0].properties.title === "Nord") index = "popupNord";
         if (evt.features[0].properties.title === "Sud-Ouest") index = "popupSudOuest";
         if (evt.features[0].properties.title === "Est") index = "popupEst";
@@ -87,10 +91,13 @@ map.on('click', 'markers-map', (evt, index) => {
         OpenPopup(evt, index);
     });
 
-map.on('mouseenter', 'markers-map', function () {
+    map.on('mouseenter', 'markers-map', function () {
         map.getCanvas().style.cursor = 'pointer';
-});
+    });
 
-map.on('mouseleave', 'markers-map', function () {
+    map.on('mouseleave', 'markers-map', function () {
         map.getCanvas().style.cursor = '';
-});
+    });
+}
+
+goButton.addEventListener('click', evt => setTimeout(LoadingMap, 10));
