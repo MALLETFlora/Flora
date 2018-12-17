@@ -19,7 +19,8 @@ inputName.addEventListener('keyup', evt => ChangeUserName(evt.target.value, user
 
 goButton.addEventListener('click', evt => {
     AccueilToCarte(evt);
-    document.querySelector('audio').autoplay = "true";
+    /*document.querySelector('audio').autoplay = "true";*/
+    document.querySelector('audio').play();
 });
 
 
