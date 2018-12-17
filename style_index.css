@@ -39,12 +39,12 @@ h1,h2,p {
 	font-size: 4em;
 }
 
-#startAdventure{
+#startAdventure {
     display: flex;
     justify-content: center;
 }
 
-#buttonStart{
+#buttonStart {
     background: none;
     border: none;
 	font-family: Tahu;
@@ -96,13 +96,27 @@ h1,h2,p {
 	height: 700px;
 	background-color : #92CECA;
 	position: fixed;
-	top: 50%; left: 50%;
-	transform: translate(-50%,-50%);
 	border: 3px solid white;
 	
 	border-radius: 20px;
 	padding: 2%;
 	overflow: scroll;
+    animation: popup_in 1s forwards;
+    top: 50%; left:50%;
+}
+
+@keyframes popup_in {
+    0%
+    {
+        opacity: 0;
+        transform: translate3D(-50%, 0px, 0px);
+    }
+    100%
+    {
+        opacity: 1;
+        transform: translate3D(-50%, -150px, 0px);
+        transform: translate(-50%,-50%);
+    }
 }
 
 #countDown {
