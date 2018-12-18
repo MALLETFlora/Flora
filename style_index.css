@@ -16,6 +16,7 @@ body {
 }
 
 #page_accueil, #page_carte {
+    position: absolute;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-around; align-items: center;
@@ -27,8 +28,39 @@ h1,h2,p {
 	font-weight: normal;
 }
 
+#page_carte {
+    animation: MapAppears 1s forwards;
+}
+
+@keyframes MapAppears {
+    0%
+    {
+        transform: translate(100%,0);
+    }
+    100%
+    {
+        transform: translate(0,0);
+    }
+}
+
+@keyframes HomeDisappears {
+    0%
+    {
+        transform: translate(0,0);
+    }
+    100%
+    {
+        transform: translate(-100%,0);
+        display: none !IMPORTANT;
+    }
+}
+
 .page-inactive {
 	display: none !IMPORTANT;
+}
+
+.page-goOut {
+    animation: HomeDisappears 1s forwards;
 }
 
 /*  PAGE ACCUEIL  */
