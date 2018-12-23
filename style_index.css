@@ -141,7 +141,7 @@ h1,h2,p {
 	flex-direction: column;
 	color: #444444;
 	width: 400px;
-	height: 700px;
+	height: 75%;
 	background-color : #92CECA;
 	position: fixed;
 	border: 3px solid white;
